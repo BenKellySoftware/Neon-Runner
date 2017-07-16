@@ -16,6 +16,7 @@ public class CharacterMovement : MonoBehaviour {
 	public int wallSide;
 
 	void Start () {
+		Cursor.visible = false;
 		rb = GetComponent<Rigidbody>();
 	}
 	
@@ -33,7 +34,7 @@ public class CharacterMovement : MonoBehaviour {
 
 		if (Input.GetButton("Jump")) {
 			if (energy - charge > 3) {
-				charge += 0.3f;
+				charge += 18 * Time.deltaTime;
 			}
 		}	
 
