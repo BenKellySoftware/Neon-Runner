@@ -46,7 +46,8 @@ public class CharacterMovement : MonoBehaviour {
 			energy -= charge;
 			charge = 0;
 		}
-		Debug.Log (1.0f / Time.deltaTime);
+		Debug.Log ("Direction: " + targetDirection);
+		Debug.Log ("Rotation: " + transform.eulerAngles.y);
 	}
 
 	public void ResetJump() {

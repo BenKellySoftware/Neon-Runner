@@ -13,7 +13,8 @@ public class PathEntry : MonoBehaviour {
 		collision.gameObject.GetComponent<CharacterMovement>().rotateTime = rotateTime;
 	}
 	void OnTriggerExit(Collider collision) {
-		collision.gameObject.GetComponent<CharacterMovement>().targetDirection = 0;
+//		collision.gameObject.GetComponent<CharacterMovement>().targetDirection = 0;
+//		collision.gameObject.GetComponent<CharacterMovement>().rotateTime = 2;
 		collision.gameObject.GetComponent<CharacterMovement>().platformTilt = 0;
 	}
 }
