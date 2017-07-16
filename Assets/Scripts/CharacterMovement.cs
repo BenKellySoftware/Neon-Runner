@@ -39,15 +39,13 @@ public class CharacterMovement : MonoBehaviour {
 
 		if (Input.GetButtonUp ("Jump")) {
 			GetComponent<AudioSource>().Play();
-			rb.AddForce (0, charge *  150, 0);
+			rb.AddForce (0, charge *  200, 0);
 			if (wallRunning) {
 				rb.AddForce (charge * 200 * wallSide, 0, 0);
 			}
 			energy -= charge;
 			charge = 0;
 		}
-		Debug.Log ("Direction: " + targetDirection);
-		Debug.Log ("Rotation: " + transform.eulerAngles.y);
 	}
 
 	public void ResetJump() {
