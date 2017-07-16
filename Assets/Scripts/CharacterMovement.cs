@@ -22,7 +22,7 @@ public class CharacterMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (energy < 80 /*&& !wallRunning */) {
-			energy += (Time.deltaTime * 100)/(energy + 25);
+			energy += (Time.deltaTime * 200)/(energy + 25);
 		}
 
 		rb.useGravity = !wallRunning;
