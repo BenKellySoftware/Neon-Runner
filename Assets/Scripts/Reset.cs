@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Reset : MonoBehaviour {
 
+	public GameObject player;
+
 	void OnTriggerEnter(Collider collision) {
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+//		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		player.GetComponent<CharacterMovement>().Reset();
 	}
 }

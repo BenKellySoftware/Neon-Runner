@@ -54,4 +54,13 @@ public class CharacterMovement : MonoBehaviour {
 		vel.y = 0;
 		rb.velocity = vel;
 	}
+
+	public void Reset() {
+		transform.position = new Vector3(0, 1.25f, 0);
+		transform.eulerAngles = new Vector3(0, 0, 0);
+		targetDirection = 0;
+		platformTilt = 0;
+		energy = 30;
+		charge = 0;
+	}
 }
